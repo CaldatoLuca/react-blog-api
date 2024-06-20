@@ -14,7 +14,7 @@ const FormInput = ({ type, name, label, value, onChange, options }) => {
             name={name}
             value={value}
             onChange={onChange}
-            className=" rounded-md"
+            className=" rounded-md text-neutral-900"
           />
         </div>
       );
@@ -26,7 +26,7 @@ const FormInput = ({ type, name, label, value, onChange, options }) => {
             name={name}
             value={value}
             onChange={onChange}
-            className=" rounded-md"
+            className=" rounded-md text-neutral-900"
           />
         </div>
       );

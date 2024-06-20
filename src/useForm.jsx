@@ -16,8 +16,8 @@ const useForm = (initialValues) => {
         setValues({
           ...values,
           [name]: checked
-            ? [...values[name], value]
-            : values[name].filter((v) => v !== value),
+            ? [...values[name], +value]
+            : values[name].filter((v) => v !== +value),
         });
       }
     } else if (type === "file") {
@@ -33,7 +33,11 @@ const useForm = (initialValues) => {
     }
   };
 
-  return [values, handleChange];
+  const resetForm = () => {
+    setValues(initialValues);
+  };
+
+  return [values, handleChange, resetForm];
 };
 
 export default useForm;
